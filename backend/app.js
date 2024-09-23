@@ -1,8 +1,9 @@
 const express = require("express");
 const app = express();
 const cookieParser = require("cookie-parser")
+const dotenv = require("dotenv");
 
-
+dotenv.config();
 if(process.env.NODE_ENV != "production"){
     require("dotenv").config({ path: "backend/config/config.env"});
 }
